@@ -11,6 +11,17 @@ module.exports = {
     project: "./tsconfig.json",
     extraFileExtensions: [".svelte"],
   },
+  settings: {
+    'import/resolver': {
+      'eslint-import-resolver-custom-alias': {
+        alias: {
+          $lib: './src/lib',
+          $app: './node_modules/@sveltejs/kit/src/runtime/app',
+        },
+        extensions: ['.js'],
+      },
+    },
+  },
   overrides: [
     {
       files: ["./*.js", "./*.cjs"],
