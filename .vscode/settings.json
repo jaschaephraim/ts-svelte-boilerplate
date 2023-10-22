@@ -27,7 +27,7 @@
   "emeraldwalk.runonsave": {
     "commands": [
       {
-        "match": ".*\\.[js,ts]",
+        "match": ".*\\.[js,cjs,ts]",
         "isAsync": false,
         "cmd": "pnpm prettier --write ${file}"
       }

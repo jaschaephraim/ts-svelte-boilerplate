@@ -1,52 +1,46 @@
 module.exports = {
   root: true,
   extends: [
-    "airbnb-base",
-    "airbnb-typescript/base",
-    "plugin:svelte/prettier",
-    "prettier",
+    'airbnb-base',
+    'airbnb-typescript/base',
+    'plugin:svelte/recommended',
+    'plugin:svelte/prettier',
+    'prettier',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: "./tsconfig.json",
-    extraFileExtensions: [".svelte"],
-  },
-  settings: {
-    'import/resolver': {
-      'eslint-import-resolver-custom-alias': {
-        alias: {
-          $lib: './src/lib',
-          $app: './node_modules/@sveltejs/kit/src/runtime/app',
-        },
-        extensions: ['.js'],
-      },
-    },
+    project: './tsconfig.json',
+    extraFileExtensions: ['.svelte'],
   },
   overrides: [
     {
-      files: ["./*.js", "./*.cjs"],
-      extends: ["plugin:@typescript-eslint/disable-type-checked"],
+      files: ['./*.js', './*.cjs'],
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
     },
     {
-      files: ["*.svelte"],
-      parser: "svelte-eslint-parser",
+      files: ['*.svelte'],
+      parser: 'svelte-eslint-parser',
       parserOptions: {
-        parser: "@typescript-eslint/parser",
+        parser: '@typescript-eslint/parser',
+      },
+      rules: {
+        'import/no-unresolved': 'off',
+        'import/extensions': 'off',
       },
     },
   ],
   rules: {
-    "import/prefer-default-export": "off",
-    "import/order": [
-      "error",
+    'import/prefer-default-export': 'off',
+    'import/order': [
+      'error',
       {
-        "newlines-between": "always",
+        'newlines-between': 'always',
         alphabetize: {
-          order: "asc",
+          order: 'asc',
         },
-        groups: ["builtin", "external", "internal"],
+        groups: ['builtin', 'external', 'internal'],
         pathGroups: [],
-        pathGroupsExcludedImportTypes: ["builtin", "object"],
+        pathGroupsExcludedImportTypes: ['builtin', 'object'],
       },
     ],
   },

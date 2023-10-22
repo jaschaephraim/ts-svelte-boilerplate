@@ -40,9 +40,6 @@ devDependencies:
   eslint-config-prettier:
     specifier: ^9.0.0
     version: 9.0.0(eslint@8.51.0)
-  eslint-import-resolver-custom-alias:
-    specifier: ^1.3.2
-    version: 1.3.2(eslint-plugin-import@2.28.1)
   eslint-plugin-svelte:
     specifier: ^2.34.0
     version: 2.34.0(eslint@8.51.0)(svelte@4.2.2)
@@ -64,6 +61,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.5.2
     version: 3.5.2(postcss@8.4.31)(svelte@4.2.2)
+  svelte-eslint-parser:
+    specifier: ^0.33.1
+    version: 0.33.1(svelte@4.2.2)
   svelte-multicssclass:
     specifier: ^2.1.1
     version: 2.1.1
@@ -1149,16 +1149,6 @@ packages:
       eslint: '>=7.0.0'
     dependencies:
       eslint: 8.51.0
-    dev: true
-
-  /eslint-import-resolver-custom-alias@1.3.2(eslint-plugin-import@2.28.1):
-    resolution: {integrity: sha512-wBPcZA2k6/IXaT8FsLMyiyVSG6WVEuaYIAbeKLXeGwr523BmeB9lKAAoLJWSqp3txsnU4gpkgD2x1q6K8k0uDQ==}
-    peerDependencies:
-      eslint-plugin-import: '>=2.2.0'
-    dependencies:
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.8.0)(eslint@8.51.0)
-      glob-parent: 6.0.2
-      resolve: 1.22.8
     dev: true
 
   /eslint-import-resolver-node@0.3.9:
