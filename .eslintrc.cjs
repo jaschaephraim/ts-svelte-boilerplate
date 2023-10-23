@@ -24,12 +24,15 @@ module.exports = {
         parser: '@typescript-eslint/parser',
       },
       rules: {
+        'import/no-mutable-exports': 'off',
         'import/no-unresolved': 'off',
-        'import/extensions': 'off',
+        'prefer-const': 'off',
       },
     },
   ],
   rules: {
+    '@typescript-eslint/no-throw-literal': 'off',
+    'import/extensions': ['error', 'never'],
     'import/prefer-default-export': 'off',
     'import/order': [
       'error',
