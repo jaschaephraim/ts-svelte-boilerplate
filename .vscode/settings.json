@@ -3,15 +3,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    // "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    // "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
   "prettier.documentSelectors": ["**/*.svelte"],
   "svelte.enable-ts-plugin": true,
@@ -22,15 +20,5 @@
   },
   "editor.quickSuggestions": {
     "strings": true
-  },
-
-  "emeraldwalk.runonsave": {
-    "commands": [
-      {
-        "match": ".*\\.[js,cjs,ts]",
-        "isAsync": false,
-        "cmd": "pnpm prettier --write ${file}"
-      }
-    ]
   }
 }
