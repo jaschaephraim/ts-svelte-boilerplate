@@ -42,7 +42,11 @@
         "caughtErrorsIgnorePattern": "^_"
       }
     ],
-    "import/extensions": ["error", "never"],
+    "import/extensions": [
+      "error",
+      "never",
+      { "json": "always", "svelte": "always" }
+    ],
     "import/prefer-default-export": "off",
     "import/order": [
       "error",
